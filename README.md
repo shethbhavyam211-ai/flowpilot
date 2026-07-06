@@ -15,7 +15,7 @@ A lightweight project management platform for startups, college teams, and small
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[Live Demo](#quick-start) · [Documentation](#documentation) · [Roadmap](ROADMAP.md) · [Report Bug](.github/ISSUE_TEMPLATE/bug_report.yml) · [Request Feature](.github/ISSUE_TEMPLATE/feature_request.yml)
+[Live Demo](https://flowpilot-omega-woad.vercel.app/) · [Documentation](#documentation) · [Report Bug](.github/ISSUE_TEMPLATE/bug_report.yml) · [Request Feature](.github/ISSUE_TEMPLATE/feature_request.yml)
 
 </div>
 
@@ -43,7 +43,6 @@ We started FlowPilot after watching three early-stage teams abandon Jira within 
 |:---:|:---:|:---:|
 | ![Landing page](docs/screenshots/landing.png) | ![Dashboard](docs/screenshots/dashboard.png) | ![Kanban board](docs/screenshots/kanban.png) |
 
-<sub>Screenshots are placeholders — capture your own and drop them in <code>docs/screenshots/</code>.</sub>
 
 ---
 
