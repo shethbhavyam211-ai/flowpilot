@@ -9,6 +9,11 @@ import { PublicOnlyRoute } from '@/components/auth/PublicOnlyRoute';
 import { MainLayout } from '@/components/layouts/MainLayout';
 import { ToastContainer } from '@/components/ui/Toast';
 import { LandingPage } from '@/pages/LandingPage';
+import { AboutPage } from '@/pages/About';
+import { BlogPage } from '@/pages/Blog';
+import { CareersPage } from '@/pages/Careers';
+import { PrivacyPage } from '@/pages/Privacy';
+import { TermsPage } from '@/pages/Terms';
 import { LoginPage } from '@/pages/auth/LoginPage';
 import { RegisterPage } from '@/pages/auth/RegisterPage';
 import { ForgotPasswordPage } from '@/pages/auth/ForgotPasswordPage';
@@ -39,6 +44,11 @@ export default function App() {
             <AppProvider>
               <Routes>
                 <Route path={ROUTES.LANDING} element={<LandingPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
                 <Route path={ROUTES.LOGIN} element={<PublicOnlyRoute><LoginPage /></PublicOnlyRoute>} />
                 <Route path={ROUTES.REGISTER} element={<PublicOnlyRoute><RegisterPage /></PublicOnlyRoute>} />
                 <Route path={ROUTES.FORGOT_PASSWORD} element={<PublicOnlyRoute><ForgotPasswordPage /></PublicOnlyRoute>} />

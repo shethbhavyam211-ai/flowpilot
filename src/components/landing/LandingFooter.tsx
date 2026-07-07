@@ -31,16 +31,16 @@ export function LandingFooter() {
             <div>
               <p className="font-extrabold text-ink mb-3">Company</p>
               <ul className="space-y-2 text-muted font-semibold">
-                <li><a href="#" className="hover:text-ink">About</a></li>
-                <li><a href="#" className="hover:text-ink">Blog</a></li>
-                <li><a href="#" className="hover:text-ink">Careers</a></li>
+                <li><Link to="/about" className="hover:text-ink">About</Link></li>
+                <li><Link to="/blog" className="hover:text-ink">Blog</Link></li>
+                <li><Link to="/careers" className="hover:text-ink">Careers</Link></li>
               </ul>
             </div>
             <div>
               <p className="font-extrabold text-ink mb-3">Legal</p>
               <ul className="space-y-2 text-muted font-semibold">
-                <li><a href="#" className="hover:text-ink">Privacy</a></li>
-                <li><a href="#" className="hover:text-ink">Terms</a></li>
+                <li><Link to="/privacy" className="hover:text-ink">Privacy</Link></li>
+                <li><Link to="/terms" className="hover:text-ink">Terms</Link></li>
               </ul>
             </div>
           </div>
