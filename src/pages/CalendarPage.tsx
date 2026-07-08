@@ -35,7 +35,7 @@ export function CalendarPage() {
     const gridStart = startOfWeek(startOfCurrentMonth, { weekStartsOn: 0 });
     const gridEnd = endOfWeek(endOfCurrentMonth, { weekStartsOn: 0 });
 
-  return eachDayOfInterval({ start: gridStart, end: gridEnd });
+    return eachDayOfInterval({ start: gridStart, end: gridEnd });
   }, [currentMonth]);
 
   const tasksForDate = (date: Date) =>
