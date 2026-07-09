@@ -52,7 +52,7 @@ export function TasksPage() {
           .join(' ')
           .toLowerCase();
 
-        return searchableText.includes(normalizedSearch)
+        return searchableText.includes(normalizedSearch);
       });
     }
 
