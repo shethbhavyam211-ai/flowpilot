@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -19,6 +20,7 @@ import { cn } from '@/utils/cn';
 import { useApp } from '@/context/AppContext';
 import { useAuth } from '@/context/AuthContext';
 import { ROUTES } from '@/constants';
+import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 
 const navItems = [
   { to: ROUTES.DASHBOARD, label: 'Dashboard', icon: LayoutDashboard },
@@ -36,6 +38,7 @@ const navItems = [
 export function Sidebar() {
   const { sidebarOpen, setSidebarOpen, notifications } = useApp();
   const { logout } = useAuth();
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   return (
@@ -101,7 +104,7 @@ export function Sidebar() {
           {sidebarOpen && <span>Settings</span>}
         </NavLink>
         <button
-          onClick={logout}
+          onClick={() => setShowLogoutConfirm(true)}
           className="flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-sm font-bold text-muted hover:text-danger hover:bg-red-50 border-2 border-transparent transition-all"
         >
           <LogOut className="h-5 w-5 shrink-0" />
@@ -115,6 +118,16 @@ export function Sidebar() {
       >
         <ChevronLeft className={cn('h-4 w-4 transition-transform', !sidebarOpen && 'rotate-180')} />
       </button>
+
+      <ConfirmDialog
+        open={showLogoutConfirm}
+        onClose={() => setShowLogoutConfirm(false)}
+        onConfirm={logout}
+        title="⚠️ Confirm Logout"
+        message="Are you sure you want to log out? Any unsaved changes in your current session may be lost."
+        confirmLabel="Log Out"
+        variant="accent"
+      />
     </aside>
   );
 }
