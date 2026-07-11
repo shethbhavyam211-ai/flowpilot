@@ -85,8 +85,8 @@ export function HeroSection() {
               </Button>
             </Link>
             <Link to={ROUTES.DASHBOARD}>
-              <Button variant="outline" size="lg" className="w-full text-white">
-                <Play className="h-5 w-5" /> View Demo
+              <Button variant="outline" size="lg" className="w-full text-black">
+                <Play className="h-5 w-5" /> sign in
               </Button>
             </Link>
           </div>
