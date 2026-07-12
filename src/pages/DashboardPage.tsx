@@ -53,12 +53,15 @@ export function DashboardPage() {
   );
 
   const urgentDeadlines = useMemo(() =>
-    [...tasks]
-      .filter((t) => t.status !== 'completed')
-      .sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime())
-      .slice(0, 4),
-    [tasks]
-  );
+  [...tasks]
+    .filter((t) =>
+      t.status !== 'completed' &&
+      getDueDateLabel(t.dueDate).label !== 'Overdue'
+    )
+    .sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime())
+    .slice(0, 4),
+  [tasks]
+);
 
   const topProject = [...activeProjects].sort((a, b) => b.progress - a.progress)[0];
 
